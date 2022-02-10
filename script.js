@@ -11,11 +11,15 @@ function validate()
 {
     var principal = document.getElementById("principal").value;
 
+
     if(isNaN(principal)){
         alert("Only Numeric Inputs are allowed");
         document.getElementById("principal").focus()
         return false;
+        
     }
+
+
     else if(principal <= 0){
         alert("Positive numbers only")
         document.getElementById("principal").focus()
@@ -43,16 +47,14 @@ function compute()
     var year = new Date().getFullYear()+parseInt(years);
 
 
-
-    if(principal == "")
-    {
-        alert("Prinicpal value is not entered")
-        document.getElementById("principal").focus()
-        return false;
+    if(principal > 0){
+    document.getElementById("result").innerHTML ="If you deposit "+principal+"\<br\> at an interest rate of "+rate+"% \<br\>You will recieve an ineterst of "+interest+",\<br\> in the year "+year
+    return true;
     }
     else {
-        document.getElementById("result").innerHTML ="If you deposit "+principal+"\<br\> at an interest rate of "+rate+"% \<br\>You will recieve an ineterst of "+interest+",\<br\> in the year "+year
-        return true;
+        alert("Invalid value in the amount field")
+        return false;
     }
+    
 }
 
