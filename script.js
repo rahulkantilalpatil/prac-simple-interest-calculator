@@ -1,4 +1,6 @@
 
+var principal = document.getElementById("principal").value;
+
 
 function updateRate()
 {
@@ -9,8 +11,8 @@ function updateRate()
 
 function validate()
 {
-    var principal = document.getElementById("principal").value;
 
+    var principal = document.getElementById("principal").value;
 
     if(isNaN(principal)){
         alert("Only Numeric Inputs are allowed");
@@ -33,8 +35,8 @@ function validate()
 
 function compute()
 {
-    var principal = document.getElementById("principal").value;
 
+    var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
 
     var years = document.getElementById("years").value;
