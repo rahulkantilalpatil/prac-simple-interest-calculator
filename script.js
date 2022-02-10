@@ -7,7 +7,21 @@ function updateRate()
 }
 
 
+function validate()
+{
+    var principal = document.getElementById("principal").value;
 
+    if(isNaN(principal)){
+        alert("Only Numeric Inputs are allowed");
+        document.getElementById("principal").focus()
+        return false;
+    }
+    else{
+        return true;
+    }
+
+    
+}
 
 function compute()
 {
