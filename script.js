@@ -47,7 +47,7 @@ function compute()
     var year = new Date().getFullYear()+parseInt(years);
 
 
-    if(principal > 0){
+    if(principal >= 1){
     document.getElementById("result").innerHTML ="If you deposit "+principal+"\<br\> at an interest rate of "+rate+"% \<br\>You will recieve an ineterst of "+interest+",\<br\> in the year "+year
     return true;
     }
