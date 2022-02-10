@@ -11,8 +11,6 @@ function updateRate()
 
 function compute()
 {
-
-
     var principal = document.getElementById("principal").value;
 
     var rate = document.getElementById("rate").value;
@@ -26,6 +24,16 @@ function compute()
 
     var year = new Date().getFullYear()+parseInt(years);
 
-    document.getElementById("result").innerHTML ="If you deposit "+principal+"\<br\> at an interest rate of "+rate+"% \<br\>You will recieve an ineterst of "+amount+",\<br\> in the year "+year
 
+
+    if(isNaN(principal)){
+        alert("Only Numeric Inputs are allowed");
+        document.getElementById("principal").focus()
+        return false;
+    }
+    else{
+
+        document.getElementById("result").innerHTML ="If you deposit "+principal+"\<br\> at an interest rate of "+rate+"% \<br\>You will recieve an ineterst of "+amount+",\<br\> in the year "+year
+        return true;
+    }
 }
