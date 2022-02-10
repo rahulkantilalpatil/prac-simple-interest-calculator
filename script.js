@@ -16,12 +16,16 @@ function validate()
         document.getElementById("principal").focus()
         return false;
     }
-    else{
-        return true;
+    else if(principal <= 0){
+        alert("Positive numbers only")
+        document.getElementById("principal").focus()
+        return false;
     }
+    else {return true;}
+}
 
     
-}
+
 
 function compute()
 {
@@ -40,14 +44,15 @@ function compute()
 
 
 
-    if(isNaN(principal)){
-        alert("Only Numeric Inputs are allowed");
+    if(principal == "")
+    {
+        alert("Prinicpal value is not entered")
         document.getElementById("principal").focus()
         return false;
     }
-    else{
-
-        document.getElementById("result").innerHTML ="If you deposit "+principal+"\<br\> at an interest rate of "+rate+"% \<br\>You will recieve an ineterst of "+amount+",\<br\> in the year "+year
+    else {
+        document.getElementById("result").innerHTML ="If you deposit "+principal+"\<br\> at an interest rate of "+rate+"% \<br\>You will recieve an ineterst of "+interest+",\<br\> in the year "+year
         return true;
     }
 }
+
